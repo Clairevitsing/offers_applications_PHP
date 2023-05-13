@@ -3,7 +3,7 @@ require_once __DIR__ . '/../layout/header.php';
 session_start();
 
 $offer_Id = $_GET['id'];
-var_dump($offer_Id);
+// var_dump($offer_Id);
 ?>
 
 
