@@ -1,12 +1,9 @@
 <?php
+require_once __DIR__ . '/layout/header.php';
 
-require_once 'layout/header.php';
-require_once 'layout/navbar.php';
 $offer_Id = $_GET['id'];
 
 ?>
-
-
 
 
 <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
@@ -38,19 +35,14 @@ $offer_Id = $_GET['id'];
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3cg">Email</label>
                   <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="email" placeholder="Email" required />
-
                 </div>
 
-
                 <div class="form-outline mb-4">
-                  <!-- <label class="form-label" for="form3Example3cg">application_date</label>
-                  <input type="dateiTime" id="form3Example3cg" class="form-control form-control-lg" name="application_date" placeholder="date" required /> -->
                   <label>Please fill in the application date:
                     <input type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}">
                     <span class="validity"></span>
                   </label>
                 </div>
-
 
                 <div class="form-outline mb-4">
                   <input class="form-control form-control-lg" id="formFileLg" type="file" name="upload" />
@@ -63,12 +55,9 @@ $offer_Id = $_GET['id'];
                   </label>
                 </div>
 
-
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="register" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
-
-
 
               </form>
 

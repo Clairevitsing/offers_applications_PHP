@@ -7,7 +7,7 @@ require_once __DIR__ . '/layout/header.php';
 require_once __DIR__ . '/classes/candidate.php';
 require_once __DIR__ . '/functions/uploadFile.php';
 require_once __DIR__ . '/functions/redirect.php';
-require_once __DIR__ . '/classes/registerError.php';
+require_once __DIR__ . '/classes/registerInformation.php';
 
 var_dump($_GET, $_FILES, $_POST);
 
@@ -39,15 +39,13 @@ if (isset($_GET['id']) && isset($_FILES['upload'])) {
     // $dateString = $_POST['date'];
     // $dateTime = DateTime::createFromFormat('Y-m-d', $dateString);
 
-    var_dump($result);
+    // var_dump($result);
 
     if ($result) {
-        $candidate = $stmt->fetch();
-        var_dump($candidate);
+        $_SESSION['flash_message'] = 'Application was sent successfully';
+        redirect('index.php?success=' . registerSuccess::REGISTER_SUCCESS);
     } else {
         redirect('register.php?error=' . registerError::UNABLE_INSERT_APPLICATION);
         echo 'Failed to insert application.';
     }
-    // var_dump($result);
-
 }
