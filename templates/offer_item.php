@@ -1,7 +1,10 @@
-<?php require_once __DIR__ . '/layout/header.php';
-require_once __DIR__ . '/db/pdo.php';
+<?php
+require_once __DIR__ . '/../layout/header.php';
+require_once __DIR__ . '/../db/pdo.php';
 
 $offer_Id = $_GET['id'];
+
+// var_dump($offer_Id);
 
 $stmt = $pdo->prepare(
   "SELECT title, content, date_created FROM offers WHERE :id = $offer_Id"
